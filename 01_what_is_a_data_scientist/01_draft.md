@@ -41,7 +41,7 @@ database, online, 3rd party applications (Saleforce, Marketo)
 
 # No free lunch
 
-# Dimensionnality curse
+# Dimensionality curse
 
 # Over fitting vs Under fitting
 
