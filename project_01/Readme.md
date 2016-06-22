@@ -20,15 +20,13 @@ In this first project you will create a framework to scope out data science proj
     - Identify features of the dataset, including the outcome and covariates/predictors
     - Create a data dictionary with classification of available variables
     - Write a high quality problem statement
-    - Assess the risks and assumptions of your data
-    - Outline exploratory analysis methods
-    - Simple exploration of the data
+    - Analyze the data
 
 - **Bonus:**
-    - Practice writing an alternative problem statement for your dataset
     - Insightful graphic or statistical exploration
 
-- Please push the notebook to your github repo and post the link on the slack classwork channel
+- **Submission**:
+    * Please push the notebook to your github repo and post the link on the slack classwork channel
 
 ---
 
@@ -62,24 +60,24 @@ While your total score is a helpful gauge of whether you've met overall project 
 
 We'll be using a classic dataset from UCLA's Logistic Regression in R [tutorial](http://www.ats.ucla.edu/stat/r/dae/logit.htm). Our goal will be to identify the various factors that may influence admission into graduate school. The dataset contains four variables- admit, gre, gpa, rank.
 
-- 'admit' is a binary variable. It indicates whether or not a candidate was admitted admit =1) our not (admit= 0)
+- 'admit' is a binary variable. It indicates whether or not a candidate was admitted (admit =1) our not (admit= 0)
 - 'gre' is GRE score
 - 'gpa' stands for Grade Point Average
 - 'rank' is the rank of an applicant's undergraduate alma mater, with 1 being the highest and 4 as the lowest
 
-> Dataset: [admissions.csv](./assets/admissions.csv)
+> Dataset: [admissions.csv](./admissions.csv)
 
-The same dataset is the subject of this excellent blog post on [logistic regression]((http://blog.yhat.com/posts/logistic-regression-and-python.html)) on the yhat's site.
+The same dataset is the subject of this excellent blog post on [logistic regression](http://blog.yhat.com/posts/logistic-regression-and-python.html) on the yhat's site.
 
 #### Jupyter Notebook and Markdown
 
-For this project we will be using an iPython notebook and use [markdown]() syntax to add text and structure to the notebook.
+For this project we will be using an iPython notebook and use [markdown](https://en.wikipedia.org/wiki/Markdown) syntax to add text and structure to the notebook.
 
-Markdown is a great way to publish text with the minimum syntax and formating. This current page is all written in markdown. As are all the slides from the course. See this [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Markdown is a great way to publish text with the minimum syntax and formating. This current page is all written in markdown and so are all the slides from the course. See this [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 1. Select mardown from the drop down
 ![select mardown](img/select_markdown.png)
-2. Add markdown formatted text
+2. Write your own markdown formatted text
 3. See the results
 ![select mardown](img/results_markdown.png)
 
