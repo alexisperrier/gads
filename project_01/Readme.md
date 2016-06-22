@@ -67,6 +67,11 @@ We'll be using a classic dataset from UCLA's Logistic Regression in R [tutorial]
 
 > Dataset: [admissions.csv](./admissions.csv)
 
+(Note: clicking on the "Raw" button/ tab gives you the raw csv data that you can copy/paste into a local file)
+
+![select mardown](img/raw_button.png)
+
+
 The same dataset is the subject of this excellent blog post on [logistic regression](http://blog.yhat.com/posts/logistic-regression-and-python.html) on the yhat's site.
 
 #### Jupyter Notebook and Markdown
