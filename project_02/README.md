@@ -5,12 +5,13 @@
 You will work on the [Blood donation](https://www.drivendata.org/competitions/2/) dataset as presented in the datadriven.org [competition](https://www.drivendata.org/competitions/2/)
 The dataset is from a mobile blood donation vehicle in Taiwan. The Blood Transfusion Service Center drives to different universities and collects blood as part of a blood drive. We want to predict whether or not a donor will give blood the next time the vehicle comes to campus.
 Read the [data explanation](https://www.drivendata.org/competitions/2/page/7/) on the datadriven.org website. You may have to create an account to access these pages.
+The [competition forum](https://community.drivendata.org/c/warm-up-predict-blood-donations) may have some insights on the data.
 
 The assignment consists of the following elements.
 
 1. A thorough graphic exploration and statistical analysis of the data
 2. Comparing several linear regression models and putting forward arguments on their vailidity and reliability
-3. Predicting blood donation on a test set. We will not use the competition's logloss metric.
+3. Predicting blood donation on a test set. We will not use the competition's logloss metric but instead the raw prediction from your best linear model.
 
 
 ## Part I : Explore the training dataset
@@ -42,14 +43,15 @@ variables. State the model assumptions.
 of the test statistic and its P-value from the output, and give your conclusion.
 
 * try some feature engineering:
-    * Transform your predictors, (log, square, combining columns), remove or add new columns
-    * report the ideas you've tried even if they don't improve the results
+    * Transform your predictors, (log, square, combining columns, ...), remove or add new columns
+    * Report the ideas you've tried even if they don't improve the results
 
 * Conclusion: Does it look that a linear model is appropriate for describing the relationship between donations and these predictors? Why or why not?
 
 ## Part II : Prediction
 
 * Use your best model to predict blood donations on the test dataset
+* Check that the results are coherent (visually or statistically)
 * Save the results in a csv file according to the BloodDonationSubmissionFormat.csv file. male sure the index / id are correct
 
 ## Submission
@@ -63,7 +65,4 @@ of the test statistic and its P-value from the output, and give your conclusion.
 * Check your work is on github https://github.com/alexperrier/ga-students/tree/master/unit-projects
 
 The due date for project 2 is Lesson 8 (Thursday 7/14).
-
-
-
 
