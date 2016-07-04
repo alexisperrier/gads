@@ -10,7 +10,7 @@ The [competition forum](https://community.drivendata.org/c/warm-up-predict-blood
 The assignment consists of the following elements.
 
 1. A thorough graphic exploration and statistical analysis of the data
-2. Comparing several linear regression models and putting forward arguments on their vailidity and reliability
+2. Comparing several linear regression models and putting forward arguments on their validity and reliability.
 3. Predicting blood donation on a test set. We will not use the competition's logloss metric but instead the raw prediction from your best linear model.
 
 
