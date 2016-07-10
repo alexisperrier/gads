@@ -1,8 +1,9 @@
 # Notebook L8 N1 Iris dataset Demo: KNN In Action
 
 from sklearn.metrics import accuracy_score
+import sklearn.datasets
 
-iris = datasets.load_iris()
+iris = load_iris()
 X = iris.data
 y = iris.target
 
