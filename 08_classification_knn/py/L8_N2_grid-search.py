@@ -14,7 +14,6 @@ df = pd.read_csv('datasets/fraudulent_balanced.csv')
 
 # Compare best K for 2 models
 # First ... walkthrouh
-# X = df[ ['student','income','balance'] ].values
 X = df[ ['income','balance'] ].values
 y = df.fraud
 

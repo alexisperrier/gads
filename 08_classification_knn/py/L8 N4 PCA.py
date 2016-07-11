@@ -19,10 +19,10 @@ y = iris.target
 # XX = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
 pca = PCA(n_components=2)
 pca.fit(X)
-XX = pca.transform(X)
+XX = pca.fit(X).transform(X)
 XX
 print(pca.explained_variance_ratio_)
 
 # Visualize Iris:
 
-plt.scatter(XX[:,0], X[:,1], c = y, cmap = plt.cm.coolwarm, label = y)
+plt.scatter(XX[:,0], XX[:,1], c = y, cmap = plt.cm.coolwarm, label = y)
