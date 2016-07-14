@@ -1,8 +1,8 @@
 # Difficult set
 
-http://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html#sklearn.datasets.make_classification
+# http://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html#sklearn.datasets.make_classification
 
-Impact of correlation on classification score
+# Impact of correlation on classification score
 
 
 import numpy as np

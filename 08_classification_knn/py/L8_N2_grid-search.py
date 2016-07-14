@@ -10,10 +10,9 @@ import matplotlib.pyplot as plt
 
 np.random.seed(8)
 
-df = pd.read_csv('datasets/fraudulent_balanced.csv')
+df = pd.read_csv('../data/fraudulent_balanced.csv')
 
 # Compare best K for 2 models
-# First ... walkthrouh
 X = df[ ['income','balance'] ].values
 y = df.fraud
 
@@ -23,22 +22,31 @@ parameters = {'n_neighbors' : np.arange(2,20) }
 
 clf = GridSearchCV(knn, parameters)
 clf.fit(X, y)
-# clf.grid_scores_
+# returns the mean over all K-Fold CV, the std and the parameter value
+clf.grid_scores_
 
-# mean
+# Extracting the mean from grid_scores_
 means = [x[1] for x in clf.grid_scores_]
 plt.plot(np.arange(2,20), means)
 
-# second same with just balance
-
+# -------------------------------------------------------------
+# second experiment: only use X = df.Balance
+# and find the best K
+# -------------------------------------------------------------
 X = df[ ['balance'] ].values
 
-# best K? => ovefitting?
+# -------------------------------------------------------------
+# 3rd experiment on Balance and Income: add the distance as a new parameter
+# and find the best (K, p)
+# -------------------------------------------------------------
 
-# and with distance
 parameters = {'n_neighbors' : np.arange(2,20), 'p': np.linspace(1,2,5) }
 
-# Scaling and Normalizing
+# -------------------------------------------------------------
+# 4th experiment on Balance and Income: 
+# Scaling and Normalizing with StandardScaler
+# Compare before and after scaling
+# -------------------------------------------------------------
 X = df[ ['income','balance'] ].values
 
 from sklearn import preprocessing
