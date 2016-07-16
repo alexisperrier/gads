@@ -7,7 +7,7 @@ As you will see the characteristics are not explicit. The field names go by deno
 
 The response variable is **Purchase**, a binary variable. Only 348 persons have bought the Caravan Insurance out of 5822 individuals.
 
-The dataset is available in the https://github.com/alexperrier/gads/tree/master/project_03 repo
+The dataset is available in the [https://github.com/alexperrier/gads/](https://github.com/alexperrier/gads/tree/master/project_03/data) repo
 
 ### 1. data exploration
 
