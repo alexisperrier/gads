@@ -43,9 +43,11 @@ spectral = cluster.SpectralClustering(n_clusters=2, eigen_solver='arpack', affin
 
 # clst = kmeans, dbscan, spectral
 
+data_titles = ['noisy_circles', 'noisy_moons', 'blobs', 'no_structure']
+
 def cluster(clst, title):
     # Create  2x2 figure for each algorithm
-    fig, ax = plt.subplots(2,2, figsize=(12,12)  )
+    fig, ax = plt.subplots(2,2, figsize=(16,4)  )
     datasets = [noisy_circles, noisy_moons, blobs, no_structure]
     plot_num = 1
     for i, dataset in enumerate(datasets):
@@ -54,14 +56,15 @@ def cluster(clst, title):
         X = StandardScaler().fit_transform(X)
         clst.fit(X)
         y_pred = clst.labels_.astype(np.int)
-        plt.subplot(2, 2, plot_num)
+        plt.subplot(1, 4, plot_num)
 
         plt.scatter(X[:, 0], X[:, 1], color=colors[y_pred].tolist(), s=10)
-        plt.title(title)
+        plt.title(data_titles[i])
         plot_num +=1
+
+cluster(spectral,'Spectral')
 
 cluster(kmeans, 'Kmeans')
 cluster(dbscan, 'DBscan')
-cluster(spectral,'Spectral')
 
 
