@@ -34,3 +34,6 @@ parameters = [{'C': [0.01, 0.1, 1, 10, 100], 'gamma': [0.5, 1,2,3,4]}]
 clf = GridSearchCV(SVC(kernel='rbf'), parameters, cv=10, scoring='accuracy')
 
 
+
+
+
