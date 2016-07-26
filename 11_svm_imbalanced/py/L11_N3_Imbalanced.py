@@ -12,7 +12,6 @@ from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import train_test_split
 from sklearn.svm import SVC
 
-
 import matplotlib.pyplot as plt
 %matplotlib
 np.random.seed(8)
@@ -23,7 +22,6 @@ df = pd.read_csv('../../datasets/Caravan.csv', index_col = False)
 df = df.sample(frac=1).reset_index(drop=True)
 
 # Split train / test 80/20
-
 
 y = df.Purchase.factorize()[0]
 X = df.drop(['Purchase'], axis=1).values
@@ -41,8 +39,12 @@ print( accuracy_score(y_hat,y))
 print(classification_report(y, y_hat))
 print( confusion_matrix(y_hat,y))
 
-# simple svc
+# -----------------------------------------------------------------------------
+# Simple svc
+# -----------------------------------------------------------------------------
 X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.20, random_state=42)
+# => 273 / 75 Yes
+
 parameters = {'C': [0.001, 0.01,0.1, 0.5,1]}
 
 clf = GridSearchCV(SVC(kernel='rbf'), parameters, cv=5, scoring='roc_auc')
@@ -55,7 +57,7 @@ y_hat = clf.predict(X_test)
 print( accuracy_score(y_hat,y_test))
 # 94% accuracy!!!
 
-print(classification_report(y_hat, y_test))
+# print(classification_report(y_hat, y_test))
 print( confusion_matrix(y_hat,y_test))
 # same problem
 
@@ -67,7 +69,6 @@ print( confusion_matrix(y_hat,y_test))
 # first let's save the original X_test and y_test
 X_test_original = X_test
 y_test_original = y_test
-
 
 # 348 yes samples
 under_df = df[df.Purchase == 'Yes']
@@ -85,7 +86,7 @@ parameters = {'C': [0.001, 0.01,0.1, 0.5,1]}
 clf = GridSearchCV(SVC(kernel='rbf'), parameters, cv=5, scoring='roc_auc')
 clf.fit(X_train,y_train)
 # confusion matrix of best model
-print(clf.grid_scores_)
+clf.grid_scores_
 
 y_hat = clf.predict(X_test)
 
