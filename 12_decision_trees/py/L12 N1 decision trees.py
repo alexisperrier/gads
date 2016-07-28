@@ -16,7 +16,6 @@ from IPython.display import Image
 %matplotlib inline
 
 
-
 from sklearn.datasets import load_iris
 from sklearn import tree
 iris = load_iris()
