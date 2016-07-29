@@ -1,4 +1,4 @@
-# L13 - NLP Notebook 1
+# L13 - NLP Notebook 2
 
 
 import pandas as pd
@@ -33,7 +33,6 @@ print(stopwords.words("english"))
 
 # remove stop words
 words = [w for w in words if not w in stopwords.words("english")]
-
 
 def review_to_words( raw_review ):
     # 1. Remove HTML
