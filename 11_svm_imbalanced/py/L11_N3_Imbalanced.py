@@ -117,6 +117,7 @@ df = pd.read_csv('../../datasets/Caravan.csv', index_col = False)
 tmp = df[df.Purchase == 'Yes']
 for _ in range(4):
     tmp = tmp.append( df[df.Purchase == 'Yes']  )
+    print(tmp.shape[0])
 
 df = df.append(tmp).sample(frac=1).reset_index(drop=True)
 print(df.Purchase.value_counts())
