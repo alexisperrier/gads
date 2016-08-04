@@ -66,6 +66,17 @@ for doc in corpus_lsi:
 lsi.save('reuters.lsi') # same for tfidf, lda, ...
 lsi = models.LsiModel.load('reuters.lsi')
 
+# LDA
+
+lda = models.LdaModel(corpus, id2word=dictionary, num_topics=5)
+corpus_lda = lda[corpus]
+
+lda.print_topics(5, num_words = 15)
+
+for doc in corpus_lda:
+    print(doc)
+
+
 # remove words that appear only once
 # from collections import defaultdict
 # frequency = defaultdict(int)
