@@ -14,6 +14,7 @@ import operator
 
 # Load data
 n_clusters = 5
+n_components=5
 categories   = ['sci.space','comp.graphics', 'sci.med', 'rec.motorcycles', 'rec.sport.baseball']
 dataset = fetch_20newsgroups(subset='train',  categories=categories, shuffle=True, random_state=42)
 
@@ -26,7 +27,7 @@ vectorizer  = TfidfVectorizer(stop_words = 'english',
 X = vectorizer.fit_transform(dataset.data)
 X.shape
 
-svd = TruncatedSVD(n_components=5,  algorithm='randomized',  n_iter=10, random_state=42)
+svd = TruncatedSVD(n_components=n_components,  algorithm='randomized',  n_iter=10, random_state=42)
 svdX = svd.fit_transform(X)
 
 nlzr = Normalizer(copy=False)
@@ -62,6 +63,20 @@ for k in range(n_components):
 
 y_pred  = km.predict(svdX)
 centers = km.cluster_centers_
+
+
+def plot_clusters(svdX, y_pred, centers):
+    plt.style.use('fivethirtyeight')
+    f, ax1 = plt.subplots(1, 1, figsize=( 16, 8), facecolor='white')
+    ax1.set_xlabel("")
+    ax1.set_ylabel("")
+    ax1.set_title("K-Means")
+    # Only plots the first 2 dimensions of the svdX matrix
+    ax1.scatter(svdX[:,0], svdX[:,1], c=y_pred, cmap=plt.cm.Paired, s=45)
+    ax1.scatter(centers[:, 0], centers[:, 1], marker='o', c="black", alpha=1, s=150)
+    ax1.axis('off')
+    plt.show()
+
 
 plot_clusters(svdX, y_pred, centers)
 
