@@ -56,6 +56,8 @@ text_clf = text_clf.fit(twenty_train.data, twenty_train.target)
 
 predicted = text_clf.predict(docs_test)
 np.mean(predicted == twenty_test.target)
+
+
 from sklearn.linear_model import SGDClassifier
 
 text_clf = Pipeline([('vect', CountVectorizer(stop_words = 'english', max_features= 1000),
