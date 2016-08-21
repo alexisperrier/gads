@@ -20,9 +20,14 @@ library('forecast')
 # help:
 # ---------------------------------
 
-?c
 ?forecast
+c(2, 3,4,5,6)
+c('a',2,3,4,'heloo', getwd())
+?c
 
+?getwd()
+setwd('the local path to the working directory')
+getwd()
 # ---------------------------------
 # Convention:
 #  x <- 1
@@ -32,7 +37,8 @@ library('forecast')
 # ---------------------------------
 
 a <- c(1,2,3,4,5)
-vector <- c(apple = 1, banana = 2, "kiwi fruit" = 3, 4)
+v <- c(apple = 1, banana = 2, "kiwi fruit" = 3, 4)
+
 
 # ---------------------------------
 # Yeah! Dataframes!
@@ -72,7 +78,8 @@ iris$target[iris$Species == 'virginica'] <- 3
 # fit model
 # notice lm is already available
 
-fit <- lm(target ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris )
+fit <- lm(target ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width+ Sepal.Length^2, data = iris )
+
 coefficients(fit)
 summary(fit)
 
